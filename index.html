@@ -2,94 +2,82 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SHAHZAD NETWORK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Body & background */
+/* Pine gradient background */
 body {
-    margin:0;
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #fff;
     text-align: center;
 }
-
-/* Container */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
-
-/* Header */
 h1 {
     font-size: 50px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-top: 0;
 }
-
-p {
-    font-size: 18px;
+p.subtitle {
+    font-size: 20px;
+    margin: 10px 0 30px;
 }
-
-/* Button */
 .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #00c9ff;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    padding: 14px 30px;
     font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
     transition: 0.3s;
-    cursor: pointer;
 }
 .btn:hover {
-    background: #00a5e0;
+    background: #e2e2e2;
 }
 
-/* Referral section */
-.ref {
+/* Referral input section */
+.ref-section {
     margin-top: 40px;
 }
-.ref input {
+.ref-section input {
+    width: 240px;
     padding: 12px;
-    width: 220px;
-    text-align: center;
-    border-radius: 5px;
     border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 10px;
 }
-.ref button {
-    margin-top: 10px;
+.ref-section button {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 12px;
+    font-weight: bold;
+    border-radius: 6px;
 }
 
-/* Info section */
-.info {
-    margin-top: 50px;
+/* How it works */
+.features {
     text-align: left;
+    max-width: 500px;
+    margin: 50px auto;
 }
-.info h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.features h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
 }
-.info ul {
-    list-style-type: disc;
-    margin-left: 25px;
+.features ul {
+    padding-left: 18px;
 }
-
-/* Footer */
-footer {
-    margin-top: 60px;
-    font-size: 14px;
-    opacity: 0.7;
-}
-
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
+.features li {
+    margin-bottom: 6px;
 }
 </style>
 </head>
@@ -97,18 +85,37 @@ html {
 
 <div class="container">
     <h1>SHAHZAD NETWORK</h1>
-    <p>Earn money online by joining our platform</p>
+    <p class="subtitle">Earn money online — Join and invite friends</p>
 
-    <a href="#ref-section" class="btn">Register Now</a>
+    <a href="#referral" class="btn">Join Now</a>
 
-    <div class="info" id="ref-section">
+    <div class="features">
         <h3>How it works?</h3>
         <ul>
-            <li>Sign up using referral link</li>
-            <li>Complete tasks</li>
-            <li>Earn daily income</li>
+            <li>Invite others using your referral</li>
+            <li>They join through your link</li>
+            <li>You earn rewards</li>
         </ul>
     </div>
 
-    <div class="ref">
-        <p>Your Referral ID:</
+    <div class="ref-section" id="referral">
+        <p>Your Referral Code</p>
+        <input type="text" id="refInput" value="SHAHZAD-1891" readonly>
+        <br>
+        <button onclick="copyCode()">Copy Code</button>
+    </div>
+
+</div>
+
+<script>
+function copyCode() {
+    const input = document.getElementById("refInput");
+    input.select();
+    input.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(input.value);
+    alert("Copied: " + input.value);
+}
+</script>
+
+</body>
+</html>
