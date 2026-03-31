@@ -1,87 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHAHZAD NETWORK</title>
-    <style>
-        /* Body & background */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHAHZAD NETWORK</title>
+<style>
+/* Body & background */
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+/* Header */
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-        p {
-            font-size: 18px;
-        }
+p {
+    font-size: 18px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #00c9ff;
-            color: black;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #00c9ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #00a5e0;
+}
 
-        .btn:hover {
-            background: #00a5e0;
-        }
+/* Referral section */
+.ref {
+    margin-top: 40px;
+}
+.ref input {
+    padding: 12px;
+    width: 220px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.ref button {
+    margin-top: 10px;
+}
 
-        .ref {
-            margin-top: 30px;
-        }
+/* Info section */
+.info {
+    margin-top: 50px;
+    text-align: left;
+}
+.info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.info ul {
+    list-style-type: disc;
+    margin-left: 25px;
+}
 
-        input {
-            padding: 10px;
-            width: 200px;
-            text-align: center;
-            border-radius: 5px;
-            border: none;
-        }
+/* Footer */
+footer {
+    margin-top: 60px;
+    font-size: 14px;
+    opacity: 0.7;
+}
 
-        .info {
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .info ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 60px;
-            font-size: 14px;
-            opacity: 0.7;
-        }
-
-        /* Scroll smooth */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h
+<div class="container">
+    <h1>SHAHZAD NETWORK</h1>
+    <p>Earn money online by joining our platform</p>
+
+    <a href="#ref-section" class="btn">Register Now</a>
+
+    <div class="info" id="ref-section">
+        <h3>How it works?</h3>
+        <ul>
+            <li>Sign up using referral link</li>
+            <li>Complete tasks</li>
+            <li>Earn daily income</li>
+        </ul>
+    </div>
+
+    <div class="ref">
+        <p>Your Referral ID:</
